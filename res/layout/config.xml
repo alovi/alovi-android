@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top_menu_layout" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:shrinkColumns="0"
+        android:stretchColumns="1" >
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/txt_config_host"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtConfigHost"
+				android:layout_width="fill_parent"
+                android:inputType="text"
+				android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/txt_config_service_context"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtConfigServiceContext"
+				android:layout_width="fill_parent"
+                android:inputType="text"
+				android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow android:paddingTop="25dip">
+            <TableLayout android:layout_span="2"
+                android:stretchColumns="0,2,4">
+				<TableRow  >
+					<TextView />
+		            <Button
+		                android:id="@+id/btn_Register"
+		                android:layout_gravity="center"
+		                android:background="@drawable/btn_accept" />
+            		<TextView />
+        		</TableRow>
+            </TableLayout>
+        </TableRow>
+      
+    </TableLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+    
+</LinearLayout>

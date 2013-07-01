@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top_menu_layout" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:shrinkColumns="0"
+        android:stretchColumns="1" >
+        <TableRow android:paddingTop="5dip" >
+            <TextView
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/user_register_oldpassword"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtOldPassword"
+                android:inputType="textPassword"
+				android:layout_width="fill_parent" >
+				<requestFocus />
+            </EditText>
+        </TableRow>
+        
+        <TableRow android:paddingTop="5dip" >
+            <TextView
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/user_register_newpassword"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtNewPassword"
+                android:inputType="textPassword"
+				android:layout_width="fill_parent" >
+            </EditText>
+        </TableRow>
+
+        <TableRow android:paddingTop="5dip" >
+            <TextView
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/user_register_renewpassword"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtReNewPassword"
+                android:inputType="textPassword"
+				android:layout_width="fill_parent" >
+            </EditText>
+        </TableRow>
+    </TableLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp" >
+		<TableLayout
+            android:id="@+id/tablelayout_changepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" >
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tablelayout_btn_changepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:padding="10dp" >
+		        <Button
+		            android:id="@+id/btn_changepass_save"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:background="@drawable/send_button"
+		            android:textColor="@color/white"
+	                android:textStyle="bold"
+	                android:textSize="20sp" />
+	        </LinearLayout>
+        </TableLayout>
+    </LinearLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+
+</LinearLayout>

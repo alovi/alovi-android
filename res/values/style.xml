@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="padded1">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="padded2">
+        <item name="android:padding">1px</item>
+        <item name="android:textSize">24px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="padded3">
+        <item name="android:padding">1px</item>
+        <item name="android:textSize">20px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="padded4">
+        <item name="android:padding">1px</item>
+        <item name="android:textSize">15px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="paddeddetail">
+        <item name="android:padding">2px</item>
+        <item name="android:textSize">22px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="paddeddetail2">
+        <item name="android:padding">2px</item>
+        <item name="android:textSize">26px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="a_padded1">
+        <item name="android:padding">2px</item>
+        <item name="android:textSize">25px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="a_padded2">
+        <item name="android:padding">2px</item>
+        <item name="android:textSize">18px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="a_padded3">
+        <item name="android:padding">2px</item>
+        <item name="android:textSize">12px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="a_paddeddetail">
+        <item name="android:padding">2px</item>
+        <item name="android:textSize">15px</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="list1" parent="padded1">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="list2" parent="padded2">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="list3" parent="padded3">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="list4" parent="padded4">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="a_list1" parent="a_padded1">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="a_list2" parent="a_padded2">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="a_list3" parent="a_padded3">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="detail1" parent="paddeddetail">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="detail2" parent="paddeddetail2">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="config1" parent="padded2">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="a_detail1" parent="a_paddeddetail">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="a_config1" parent="a_padded2">
+        <item name="android:textColor">#000000</item>
+        <item name="android:shadowColor">#323232</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Animations" />
+
+    <style name="Animations.GrowFromBottom">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <style name="Animations.GrowFromTop">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+
+    <style name="Animations.PopDownMenu">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+    <style name="Animations.Jumb">
+        <item name="@android:windowEnterAnimation">@anim/amination_jumb</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+
+</resources>

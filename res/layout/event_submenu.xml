@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top_menu_layout" />
+
+    <TableLayout
+        android:id="@+id/lvEventMenus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:id="@+id/tbevent_notice"
+            android:background="@drawable/mywallet_submenu_bar"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:text="@string/txt_event_notice"
+                android:textColor="@color/black" />
+
+            <TextView />
+
+            <Button
+                android:id="@+id/btnmywallet_submenu_arrow"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mywallet_submenu_arrow" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbevent_event_news"
+            android:background="@drawable/mywallet_submenu_bar"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:text="@string/txt_event_event_news"
+                android:textColor="@color/black" />
+
+            <TextView />
+
+            <Button
+                android:id="@+id/btnmywallet_submenu_arrow"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mywallet_submenu_arrow" />
+        </TableRow>
+    </TableLayout>
+    
+    <LinearLayout
+		android:layout_width="wrap_content"
+        android:layout_height="290dp"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <TableLayout
+	    	android:layout_width="fill_parent"
+	      	android:layout_height="wrap_content"
+	      	android:padding="10dip"
+	      	android:shrinkColumns="0"
+	      	android:stretchColumns="1" >
+	        <TableRow>
+
+	            <Button
+	                android:id="@+id/btnRefresh"
+	                android:layout_marginRight="4dp"
+	                android:background="@drawable/edit_info_resign_bt" />
+	        </TableRow>
+	        <TableRow>
+	        	<TextView
+	            	android:id="@+id/txtMaGiaoDich"
+        			android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="1dip"
+	                android:text="@string/user_register_firstname"
+	                android:textColor="@color/black" />
+	        	<TextView
+	            	android:id="@+id/txtState"
+        			android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_firstname"
+	                android:textColor="@color/black" />
+	    	</TableRow>
+	    	<TableRow>
+	    		<TextView
+	            	android:id="@+id/txtContent"
+        			android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_firstname"
+	                android:textColor="@color/black" />
+	        </TableRow>
+	    </TableLayout>
+        
+    </LinearLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+
+</LinearLayout>

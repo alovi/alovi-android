@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        layout="@layout/main_top_menu_layout" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="3dip"
+        android:stretchColumns="0,2,4,6"
+        android:visibility="gone" >
+
+        <TableRow android:layout_height="wrap_content" >
+
+            <Gallery
+                android:id="@+id/Gallery01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="7"
+                android:animationDuration="800"
+                android:background="@drawable/submenu_bg3"
+                android:spacing="15dip" >
+
+            </Gallery>
+        </TableRow>
+    </TableLayout>
+    
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:shrinkColumns="0"
+        android:stretchColumns="1"
+        android:background="@drawable/common_black_bg" >
+        
+        <TableRow android:paddingTop="5dip" >
+            <TextView
+                android:text="@string/txt_payment_serviceid"
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            
+            <EditText
+                android:id="@+id/txtServiceID"
+	            android:inputType="number"
+				android:layout_width="fill_parent" >
+            </EditText>
+        </TableRow>
+        
+        <TableRow android:paddingTop="5dip" >
+            <TextView
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/txt_payment_amount"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            
+            <EditText
+                android:id="@+id/txtAmount"
+                android:inputType="number"
+				android:layout_width="fill_parent" >
+				<requestFocus />
+            </EditText>
+        </TableRow>
+    </TableLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        
+        <TableLayout
+            android:id="@+id/tablelayout_btn_order_cardcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+
+		        <Button
+		            android:id="@+id/btn_mycart_order"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:background="@drawable/btn_send" />
+
+	        </LinearLayout>
+        </TableLayout>
+    </LinearLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+
+</LinearLayout>

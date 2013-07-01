@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+  
+    <LinearLayout
+        android:id="@+id/main_menu_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="2"
+            android:stretchColumns="2" >
+
+            <TableRow
+                android:background="@drawable/bar"
+                android:gravity="center" >
+
+                <TextView android:paddingLeft="5dip" >
+                </TextView>
+
+                <Button
+                    android:id="@+id/btn_common_back"
+                    android:background="@drawable/btn_common_back_bt" />
+
+                <TextView
+                    android:id="@+id/maintitle"
+                    android:gravity="center"
+                    android:text="@string/txt_register"
+                    android:textColor="@color/white"
+                    android:textSize="7pt"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgCommonlogo"
+                    android:clickable="true"
+                    android:contentDescription="@string/txt_logo"
+                    android:src="@drawable/common_logo" />
+
+                <TextView
+                    android:id="@+id/txtStoreName"
+                    android:gravity="right"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/white"
+                    android:textSize="5pt" />
+
+                <TextView android:paddingRight="5dip" >
+                </TextView>
+            </TableRow>
+        </TableLayout>
+          <!-- NFC tag -->
+ 	  <LinearLayout
+            android:id="@+id/list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="invisible" />
+ 	<!--  -->
+    </LinearLayout>
+
+</merge>

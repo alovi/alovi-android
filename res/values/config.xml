@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_host">https://alovi.com.vn</string>
+    <string name="config_hostip">https://116.118.119.200</string>
+    <string name="config_service_context">/test/index.php/api</string>
+</resources>

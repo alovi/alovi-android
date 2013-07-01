@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top_menu_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none"
+        android:paddingTop="10dip" >
+    
+	    <TableLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="10dip"
+	        android:shrinkColumns="0"
+	        android:stretchColumns="1" >
+	                
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_firstname"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	
+	            <EditText
+	                android:id="@+id/txtUserFirstName"
+					android:layout_width="fill_parent"
+	                android:inputType="text"
+					android:layout_height="wrap_content" />
+	                <requestFocus />
+	        </TableRow>
+	
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_lastname"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtUserLastName"
+					android:layout_width="fill_parent"
+	                android:inputType="text"
+					android:layout_height="wrap_content" />
+	        </TableRow>
+	
+	        <TableRow android:paddingTop="5dip" >
+	            <TextView
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_username"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtUserName"
+	                android:inputType="text"
+					android:layout_width="fill_parent"
+					android:enabled="false" >
+	            </EditText>
+	        </TableRow>
+	
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_email"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtEmail"
+					android:inputType="textEmailAddress"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+	        </TableRow>
+	
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_phone"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtPhone"
+					android:layout_width="fill_parent"
+	                android:inputType="phone"
+					android:layout_height="wrap_content" />
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	        	android:visibility="gone" >
+	
+	            <Gallery
+	                android:id="@+id/Gallery01"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_span="7"
+	                android:animationDuration="800"
+	                android:background="@drawable/submenu_bg3"
+	                android:spacing="15dip" >
+	
+	            </Gallery>
+	        </TableRow>
+	
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_bankid"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtBankId"
+					android:layout_width="fill_parent"
+	                android:inputType="phone"
+					android:layout_height="wrap_content" />
+	        </TableRow>
+	
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_bankaccountnumber"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtBankAccountNumber"
+					android:layout_width="fill_parent"
+	                android:inputType="phone"
+					android:layout_height="wrap_content" />
+	        </TableRow>
+	
+	        <TableRow>
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:paddingRight="5dip"
+	                android:text="@string/user_register_bankaccountname"
+	                android:textColor="@color/black"
+	                android:textStyle="bold" />
+	            <EditText
+	                android:id="@+id/txtBankAccountName"
+					android:layout_width="fill_parent"
+	                android:inputType="phone"
+					android:layout_height="wrap_content" />
+	        </TableRow>
+	    </TableLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:stretchColumns="0,2,4,6" >
+        <TableRow>
+            <TextView />
+            <Button
+                android:id="@+id/btn_edit_info_ok"
+                android:layout_gravity="right"
+                android:background="@drawable/btn_send" />
+            <TextView />
+            <Button
+                android:id="@+id/btn_edit_info_pass"
+                android:layout_gravity="right"
+                android:background="@drawable/btn_edit_info_pass_bt" />
+            <TextView />
+        </TableRow>
+    </TableLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+</LinearLayout>

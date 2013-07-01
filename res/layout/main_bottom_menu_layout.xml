@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    >
+
+    <RelativeLayout
+        android:id="@+id/main_menu_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical" >
+		
+		
+        
+        
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,2,4,6,8,10" 
+            android:layout_alignParentBottom="true" >
+
+            <TableRow
+                android:background="@drawable/bar"
+                android:gravity="center" >
+
+                <TextView/>
+
+                <Button
+                    android:id="@+id/btn_common_home"
+                    android:background="@drawable/btn_common_home_bt" />
+
+                <TextView
+                  />
+
+                 <Button
+                    android:id="@+id/btn_common_mycart"
+                    android:background="@drawable/btn_common_mycart_bt" />
+	<TextView
+                  />
+
+                 <Button
+                    android:id="@+id/btn_common_mywallet"
+                    android:background="@drawable/btn_common_mywallet_bt" />
+                 <TextView
+                  />
+
+                 <Button
+                    android:id="@+id/btn_common_events"
+                    android:background="@drawable/btn_common_events_bt" />
+                 <TextView
+                  />
+
+                 <Button
+                    android:id="@+id/btn_common_call"
+                    android:background="@drawable/btn_common_call_bt" />
+                <TextView />
+            </TableRow>
+        </TableLayout>
+        
+    </RelativeLayout>
+
+</merge>

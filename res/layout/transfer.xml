@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        layout="@layout/main_top_menu_layout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="290dp"
+            android:background="@drawable/common_black_bg"
+            android:orientation="vertical"
+            android:padding="1dp" >
+    
+    		<TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="5dip"
+                    android:text="@string/txt_payment_amount"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+	
+	            <EditText
+	                android:id="@+id/txtAmount"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="number" >
+
+				</EditText>
+            </TableRow>
+
+			<TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dip" >
+
+	            <EditText
+	                android:id="@+id/txtAmount1"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="number"
+	                android:visibility="gone" >
+
+				</EditText>
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:paddingRight="5dip"
+                    android:text="@string/txt_account_name_transfer"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dip" >
+
+                <EditText
+	                android:id="@+id/txtAccount"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="text" >
+
+				</EditText>
+			</TableRow>
+    
+    		<TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="5dip"
+                    android:text="@string/txt_note_transfer"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+	
+	            <EditText
+	                android:id="@+id/txtNoteTransfer"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="text" >
+				</EditText>
+            </TableRow>
+    
+    		<TableRow
+    		    android:id="@+id/tableRowPinTransfer"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="wrap_content"
+    		    android:paddingTop="5dip"
+    		    android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="5dip"
+                    android:text="@string/txt_pin_transfer"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+	
+	            <EditText
+	                android:id="@+id/txtPinTransfer"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="text" >
+				</EditText>
+            </TableRow>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:gravity="center" >
+            <TableRow>
+                <Button
+                    android:id="@+id/btn_mycart_order1"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="40dp"
+                    android:background="@drawable/btn_send" />
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+
+</LinearLayout>

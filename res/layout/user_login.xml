@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg1"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top_menu_layout" />
+    
+	<TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="70dip"
+        android:shrinkColumns="0"
+        android:stretchColumns="1" >
+
+        <TableRow
+        	android:padding="3dip"
+            android:layout_height="wrap_content" >
+
+            <Gallery
+                android:id="@+id/Gallery01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="7"
+                android:animationDuration="800"
+                android:background="@drawable/submenu_bg"
+                android:spacing="15dip" >
+            </Gallery>
+        </TableRow>
+
+		<TableRow android:paddingTop="5dip" >
+            <TextView
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/user_register_username"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtUserName"
+                android:inputType="text"
+				android:layout_width="fill_parent" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow android:paddingTop="5dip" >
+            <TextView
+                android:gravity="right"
+                android:paddingRight="5dip"
+                android:text="@string/user_register_password"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/txtPassword"
+                android:inputType="textPassword"
+				android:layout_width="fill_parent" >
+            </EditText>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp" />
+        
+        <TableRow >
+            <TableLayout android:layout_span="2" />
+        </TableRow>
+        
+        <TableRow android:paddingTop="5dip">
+            <TableLayout android:layout_span="2"
+                android:stretchColumns="0,2,4">
+				<TableRow  >
+					<TextView />
+		            <Button
+		                android:id="@+id/btn_Login"
+		                android:layout_gravity="center"
+		                android:background="@drawable/btn_login" />
+            		<TextView />
+		            <Button    
+		                android:id="@+id/btn_register"
+		                android:layout_gravity="center"
+		                android:background="@drawable/btn_register" />
+            		<TextView />
+        		</TableRow>
+            </TableLayout>
+        </TableRow>
+      
+    </TableLayout>
+</LinearLayout>

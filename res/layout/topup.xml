@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        layout="@layout/main_top_menu_layout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="320dp"
+            android:background="@drawable/common_black_bg"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <RadioGroup
+		        android:id="@+id/rgTypePay"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+		
+	        	<RadioButton
+		            android:id="@+id/rbTraTruoc"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/topup_tratruoc" 
+		            android:checked="true"
+		            android:paddingRight="28dip"
+		            android:paddingBottom="0dip" />
+		        <RadioButton
+		            android:id="@+id/rbTraSau"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/topup_trasau"
+		            android:paddingTop="0dip" />
+			</RadioGroup>
+    
+    		<TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="5dip"
+                    android:text="@string/txt_payment_amount"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+	
+	            <EditText
+	                android:id="@+id/txtAmount"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="number" >
+
+				</EditText>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+	            <TextView
+                    android:id="@+id/txtNoteMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingRight="5dip"
+                    android:text="@string/txt_note_money1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+	        </TableRow>
+	        
+	        <TableLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="35dp"
+	            android:stretchColumns="0" >
+
+	            <TableRow
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingTop="5dip" >
+	
+	                <TextView
+	                    android:layout_width="wrap_content"
+	                    android:gravity="left"
+	                    android:paddingRight="5dip"
+	                    android:text="@string/txt_account_mobile"
+	                    android:textColor="@color/white"
+	                    android:textStyle="bold" />
+		        </TableRow>
+
+	            <TableRow
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" >
+	
+	                <EditText
+		                android:id="@+id/txtAccount"
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:inputType="number" >
+	
+					</EditText>
+					
+					<Button
+					    android:id="@+id/btnMyContact"
+					    android:layout_gravity="center_vertical"
+					    android:background="@drawable/btn_read_more" />
+	
+				</TableRow>
+			</TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dip"
+	    android:stretchColumns="0,2,4" >
+	    <TableRow>
+			<TextView />
+            <Button
+                android:id="@+id/btn_mycart_order"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="40dp"
+                android:background="@drawable/send_button" />
+       		<TextView />
+       	</TableRow>
+    </TableLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+
+</LinearLayout>
