@@ -1,14 +1,14 @@
 package com.alovi.common;
 
 import com.alovi.R;
-import com.alovi.activity.MyAsiaTopupActivity;
-import com.alovi.activity.MyCardActivity;
-import com.alovi.activity.MyGateFPTCardActivity;
-import com.alovi.activity.MySoftnyxCardActivity;
-import com.alovi.activity.MyTopupActivity;
-import com.alovi.activity.MyVcoinCardActivity;
-import com.alovi.activity.MyVcoinTopupActivity;
-import com.alovi.activity.MyZingXuCardActivity;
+import com.alovi.activity.TopupAsiaActivity;
+import com.alovi.activity.CardActivity;
+import com.alovi.activity.CardGateFPTActivity;
+import com.alovi.activity.CardSoftnyxActivity;
+import com.alovi.activity.TopupActivity;
+import com.alovi.activity.CardVcoinActivity;
+import com.alovi.activity.TopupVcoinActivity;
+import com.alovi.activity.CardZingXuActivity;
 import com.alovi.data.GlobalVariables;
 
 import android.app.Activity;
@@ -71,27 +71,27 @@ public class SubMenuOrder extends SubMenu {
 			GlobalVariables.TYPE_MENU = 0;
 			switch (index) {
 			case 0: //VcoinTopup
-				intent = new Intent(this.activity, MyVcoinTopupActivity.class);
+				intent = new Intent(this.activity, TopupVcoinActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 1: //AsiaTopup
-				intent = new Intent(this.activity, MyAsiaTopupActivity.class);
+				intent = new Intent(this.activity, TopupAsiaActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 2: //The Vcoin
-				intent = new Intent(this.activity, MyVcoinCardActivity.class);
+				intent = new Intent(this.activity, CardVcoinActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 3: //The Gate FPT
-				intent = new Intent(this.activity, MyGateFPTCardActivity.class);
+				intent = new Intent(this.activity, CardGateFPTActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 4: //The ZingXu
-				intent = new Intent(this.activity, MyZingXuCardActivity.class);
+				intent = new Intent(this.activity, CardZingXuActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 5: //The Softnyx
-				intent = new Intent(this.activity, MySoftnyxCardActivity.class);
+				intent = new Intent(this.activity, CardSoftnyxActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			default:
@@ -102,11 +102,11 @@ public class SubMenuOrder extends SubMenu {
 			GlobalVariables.TYPE_MENU = 0;
 			switch (index) {
 			case 0: //Topup
-				intent = new Intent(this.activity, MyTopupActivity.class);
+				intent = new Intent(this.activity, TopupActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 1: //The Cao
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			default:
@@ -117,27 +117,27 @@ public class SubMenuOrder extends SubMenu {
 			GlobalVariables.TYPE_MENU = 0;
 			switch (index) {
 			case 0: //Dien
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 1: //Nuoc
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 2: //Dien thoai co dinh co day
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 3: //Dien thoai co dinh ko day
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 4: //Internet(ADSL/Cap Quang)
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			case 5: //Truyen hinh cap
-				intent = new Intent(this.activity, MyCardActivity.class);
+				intent = new Intent(this.activity, CardActivity.class);
 				this.activity.startActivity(intent);
 				break;
 			default:

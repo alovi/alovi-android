@@ -1,7 +1,7 @@
 package com.alovi.activity;
 
 import com.alovi.R;
-import com.alovi.common.Config;
+import com.alovi.common.AVLog;
 import com.alovi.common.MainMenu;
 import com.alovi.common.MessageTypes;
 import com.alovi.common.Util;
@@ -26,7 +26,7 @@ public class MyWalletActivity extends BaseActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.mywallet_info);
+		setContentView(R.layout.wallet_info);
 		menu = new MainMenu(this, true);
 		menu.setTextMainTitle(getString(R.string.txt_mywallet_info_title).toString());
 		menu.setButtonMyWalletStatus(true);
@@ -80,7 +80,7 @@ public class MyWalletActivity extends BaseActivity {
 				messageBox(MessageTypes.Error, getString(R.string.text_check_net_fail).toString());
 			}
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 		}
 	}
 

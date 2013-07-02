@@ -144,6 +144,7 @@
     <string name="txt_topup_title">Thanh toán Topup</string>
     <string name="txt_vcoin_card_title">Thanh toán Thẻ Vcoin</string>
     <string name="txt_zingxu_card_title">Thanh toán Thẻ Zingxu</string>
+    <string name="txt_not_exists_storage">Not exists Storages!</string>
     
 	<string name="msg_exist_confirm">Bạn muốn thoát?</string>
 	<string name="msg_processing">Đang xử lý. . .</string>

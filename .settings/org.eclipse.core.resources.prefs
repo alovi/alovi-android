@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/com/alovi/activity/MyAsiaTopupActivity.java=UTF-8
-encoding//src/com/alovi/activity/MyTopupActivity.java=UTF-8
-encoding//src/com/alovi/activity/MyVcoinTopupActivity.java=UTF-8
+encoding//src/com/alovi/activity/TopupActivity.java=UTF-8
+encoding//src/com/alovi/activity/TopupAsiaActivity.java=UTF-8
+encoding//src/com/alovi/activity/TopupVcoinActivity.java=UTF-8
 encoding//src/com/alovi/activity/TransferActivity.java=UTF-8

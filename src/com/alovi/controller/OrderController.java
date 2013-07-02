@@ -1,6 +1,6 @@
 package com.alovi.controller;
 
-import com.alovi.common.Config;
+import com.alovi.common.AVLog;
 import com.alovi.common.Order;
 import com.alovi.common.OrderProcessState;
 import com.alovi.common.ServiceFactory;
@@ -63,7 +63,7 @@ public class OrderController {
 			}
 			return null;
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -102,7 +102,7 @@ public class OrderController {
 			}
 			return null;
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -123,7 +123,7 @@ public class OrderController {
 			}
 			return null;
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -150,7 +150,7 @@ public class OrderController {
 			}
 			return null;
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -171,7 +171,7 @@ public class OrderController {
 			}
 			return null;
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -194,7 +194,7 @@ public class OrderController {
 			}
 			return null;
 		} catch (Exception ex) {
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			return null;
 		}
 	}

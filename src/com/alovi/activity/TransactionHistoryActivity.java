@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.alovi.R;
-import com.alovi.common.Config;
+import com.alovi.common.AVLog;
 import com.alovi.common.MainMenu;
 import com.alovi.controller.OrderController;
 import com.alovi.data.PaymentData;
@@ -51,7 +51,7 @@ public class TransactionHistoryActivity extends BaseActivity {
 		    listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
 		    lvCategory.setAdapter( listAdapter );
 		}catch(Exception ex){
-			Config.WriteLog(ex.getMessage());
+			AVLog.WriteLog(ex.getMessage());
 			Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
 		}
 	}

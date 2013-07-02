@@ -2,6 +2,7 @@ package com.alovi.controller;
 
 import android.util.Log;
 
+import com.alovi.common.AVLog;
 import com.alovi.common.Config;
 import com.alovi.data.AccountBankData;
 import com.alovi.data.BalanceData;
@@ -30,20 +31,19 @@ public class UserController {
 			if(service.getResponseCode() == 200) {
 				try{
 					Gson gson = new Gson();
-					//String response = URLDecoder.decode(service.getResponse(), "UTF-8");
 			        UserData userData = gson.fromJson(service.getResponse(), UserData.class);
 					GlobalResource globalResource = GlobalResource.getInstance();
 					globalResource.setUser(userData);
 					globalResource.setPassword(password);
 			        return userData;
 				}catch(Exception e){
-					Config.WriteLog(e.getMessage());
+					AVLog.WriteLog(e.getMessage());
 				}
 				return null;
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
@@ -80,12 +80,12 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
 	
-	/*
+	/**
 	 * @param string $username
 	 * @param string $first_name
 	 * @param string $last_name
@@ -122,14 +122,10 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
-
-	/*public static UserData[] getAllUsers() {
-		return service.getUsers();
-	}*/
 	
 	public static BalanceData checkBalance () {
 		RestClient service=new RestClient(APIServiceVariables.getInstance().URL_CHECK_BALANCEUSER());
@@ -145,7 +141,7 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
@@ -164,12 +160,12 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
 	
-	/*
+	/**
 	 * @param string $old_password
 	 * @param string $new_password
 	 * @param string $confirm_new_password
@@ -191,7 +187,7 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
@@ -210,12 +206,12 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
 	
-	/*
+	/**
 	 * @param type : unc_person(default), bank
 	 */
 	public static AccountBankData getAccountAloviAccepted(String type) {
@@ -233,7 +229,7 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
@@ -252,12 +248,12 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
 
-	/*
+	/**
 	 * @param pvReceipt Tai khoan nhan tien.(Khong bat buoc)
 	 *	 	Tai khoan nhan neu muon nap rieng cho 1 tai khoan nao do.
 	 * @param pvAmount So tien gui vao he thong.
@@ -297,12 +293,12 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
 	
-	/*
+	/**
 	 * @param pvReceipt Tai khoan nhan tien.
 	 *	 	Tai khoan nhan tien chuyen khoan.
 	 * @param pvAmount So tien chuyen cho tai khoan khac.
@@ -328,12 +324,12 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}
 	
-	/*
+	/**
 	 * @param name Ten can tim.
 	 * 		Co the khong can cung cap neu khong tim kiem.
 	 * @param phone_number So dien thoai can tim.
@@ -358,7 +354,7 @@ public class UserController {
 			}
 			return null;
 		} catch (Exception e) {
-			Config.WriteLog(e.getMessage());
+			AVLog.WriteLog(e.getMessage());
 			return null;
 		}
 	}

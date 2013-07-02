@@ -25,7 +25,7 @@ public class DiscountsActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.discounts_list);
+		setContentView(R.layout.discounts);
 		menu = new MainMenu(this, true);
 		menu.setTextMainTitle(getString(R.string.txt_discounts_title).toString());
 		menu.setButtonMycartOn();

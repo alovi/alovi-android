@@ -5,7 +5,7 @@ import com.alovi.activity.AboutActivity;
 import com.alovi.activity.BaseActivity;
 import com.alovi.activity.EventMenuActivity;
 import com.alovi.activity.MainActivity;
-import com.alovi.activity.MyCardActivity;
+import com.alovi.activity.CardActivity;
 import com.alovi.controller.UserController;
 import com.alovi.data.GlobalResource;
 import com.alovi.data.GlobalVariables;
@@ -180,7 +180,7 @@ public class MainMenu {
 
 					return;
 				}
-				Intent intent = new Intent(MainMenu.this.activity, MyCardActivity.class);
+				Intent intent = new Intent(MainMenu.this.activity, CardActivity.class);
 				//intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 				MainMenu.this.activity.startActivity(intent);
 				
