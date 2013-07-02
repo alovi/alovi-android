@@ -99,12 +99,6 @@
 		                android:inputType="number" >
 	
 					</EditText>
-					
-					<!-- <Button
-					    android:id="@+id/btnMyContact"
-					    android:layout_gravity="center_vertical"
-					    android:background="@drawable/btn_mycart_menu_bt" /> -->
-	
 				</TableRow>
 			</TableLayout>
         </LinearLayout>

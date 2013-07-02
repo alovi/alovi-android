@@ -1,6 +1,7 @@
 package com.alovi.activity;
 
 import com.alovi.R;
+import com.alovi.common.Config;
 import com.alovi.common.MainMenu;
 import com.alovi.common.MessageTypes;
 import com.alovi.common.OrderState;
@@ -12,7 +13,6 @@ import com.alovi.data.OrderData;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -51,11 +51,12 @@ public class MySoftnyxCardActivity extends BaseActivity {
 							new Thread(new Runnable() {
 								@Override
 								public void run() {
-									OrderState state=OrderState.Error;
+									OrderState state = OrderState.Error;
 									try {
 										state = doOrder();
-									} catch (Exception e) {
-										e.printStackTrace();
+									} catch (Exception ex) {
+										Config.WriteLog(ex.getMessage());
+										//e.printStackTrace();
 									}
 									finally{
 										Message msg = handlerOrder.obtainMessage();
@@ -67,19 +68,16 @@ public class MySoftnyxCardActivity extends BaseActivity {
 						} else {
 							messageBox(MessageTypes.Error, getString(R.string.text_check_net_fail).toString());
 						}
-					} catch (Exception ex) { }
+					} catch (Exception ex) {
+						Config.WriteLog(ex.getMessage());
+					}
 				}
 			});
 		}catch(Exception ex){
+			Config.WriteLog(ex.getMessage());
 			Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
 		}
 		btnOrder.setEnabled(true);
-	}
-
-	public void setMenu(String storeCode) {
-		// menu.setTextMainTitle(getStoreName());
-		Bitmap bitmap = getStoreLogo();
-		menu.setLogoImage(bitmap, storeCode);
 	}
 
 	final Handler handlerOrder = new Handler() {
@@ -92,7 +90,7 @@ public class MySoftnyxCardActivity extends BaseActivity {
 				builder.setMessage(getString(R.string.txt_error))
 						.setTitle(R.string.txt_error)
 						.setCancelable(false)
-						.setPositiveButton(getString(R.string.text_ok),//text_yes),
+						.setPositiveButton(getString(R.string.text_ok),
 								new DialogInterface.OnClickListener() {
 									@Override
 									public void onClick(DialogInterface dialog, int id) {
@@ -101,7 +99,6 @@ public class MySoftnyxCardActivity extends BaseActivity {
 								});
 				AlertDialog alert = builder.create();
 				alert.show();
-				//showDlgRegister();
 				return;
 			}else if(state==OrderState.Success){
 				Util.alertOrderState(getApplicationContext(), OrderState.Created);
@@ -134,7 +131,7 @@ public class MySoftnyxCardActivity extends BaseActivity {
 	private OrderState doOrder() throws Exception{
 		OrderData state;
 		String amount = txtAmount.getText().toString();
-		state = OrderController.createOrder(2, amount, "9859", null, true);
+		state = OrderController.createOrder(2, amount, getString(R.string.const_card_softnyx_serviceid), null, true);
 		if(state != null){
 			GlobalResource globalResource = GlobalResource.getInstance();
 			globalResource.setOrderCode(""+state.response.order.paymentID);

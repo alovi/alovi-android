@@ -108,7 +108,6 @@ public class GlobalResource {
 		if (order == null) {
 			order = new Order();
 		}
-		//order.OrdererUserName = userName;
 		order.StoreCode = storeCode;
 		order.OrderDigiCode = storeCode + subCode;
 		order.TableCode = subCode;

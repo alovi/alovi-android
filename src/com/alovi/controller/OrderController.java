@@ -1,5 +1,6 @@
 package com.alovi.controller;
 
+import com.alovi.common.Config;
 import com.alovi.common.Order;
 import com.alovi.common.OrderProcessState;
 import com.alovi.common.ServiceFactory;
@@ -21,13 +22,6 @@ import android.util.Log;
 public class OrderController {
 
 	/**
-	 * Create Order
-	 * 
-	 * @param mobilePhone
-	 * @param order
-	 * @return
-	 */
-	/*
 	 * @param string pvAmount So tien nap.
 	 * @param string serviceID Ma dich vu.
 	 * 		Khi thanh toan topup dien thoai co the khong can cung cap.
@@ -68,7 +62,8 @@ public class OrderController {
 				return resultOrder;
 			}
 			return null;
-		} catch (Exception e) {
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -84,7 +79,7 @@ public class OrderController {
 		return orderStatus;
 	}
 
-	/*
+	/**
 	 * @param integer id Ma giao dich.
 	 * @return object{ status=1, data } thanh cong.
 	 * object{ status=0, error } khong thanh cong.
@@ -106,7 +101,8 @@ public class OrderController {
 				return paymentData;
 			}
 			return null;
-		} catch (Exception e) {
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
@@ -126,12 +122,13 @@ public class OrderController {
 				return paymentData;
 			}
 			return null;
-		} catch (Exception e) {
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
 
-	/*
+	/**
 	 * serviceID --> function get_discounts of API USER.
 	 * or pvAccount
 	 */
@@ -152,12 +149,13 @@ public class OrderController {
 				return discountData;
 			}
 			return null;
-		} catch (Exception e) {
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
 
-	/*
+	/**
 	 * @param mobile string
 	 */
 	public static String checkMobile (String numberPhone) {
@@ -172,12 +170,13 @@ public class OrderController {
 				return service.getResponse();
 			}
 			return null;
-		} catch (Exception e) {
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
 			return null;
 		}
 	}
 
-	/*
+	/**
 	 * type : mobile_card, game, zingxu_card, viettel, trasau, mobile_topup
 	 */
 	public static MoneyData getListMoney (String type) {
@@ -194,7 +193,8 @@ public class OrderController {
 				return moneyData;
 			}
 			return null;
-		} catch (Exception e) {
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
 			return null;
 		}
 	}

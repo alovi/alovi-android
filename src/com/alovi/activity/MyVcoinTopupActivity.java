@@ -1,6 +1,7 @@
 package com.alovi.activity;
 
 import com.alovi.R;
+import com.alovi.common.Config;
 import com.alovi.common.MainMenu;
 import com.alovi.common.MessageTypes;
 import com.alovi.common.OrderState;
@@ -12,7 +13,6 @@ import com.alovi.data.OrderData;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -25,7 +25,7 @@ import android.widget.Toast;
 public class MyVcoinTopupActivity extends BaseActivity {
 
 	private MainMenu menu;
-	private Button btnOrder;//, btnMyContact;
+	private Button btnOrder;
 	private EditText txtAmount, txtAccount;
 
 	@Override
@@ -38,7 +38,6 @@ public class MyVcoinTopupActivity extends BaseActivity {
 			menu.setButtonMycartOn();
 	
 			btnOrder = (Button) findViewById(R.id.btn_mycart_order);
-			//btnMyContact = (Button) findViewById(R.id.btnMyContact);
 			txtAmount = (EditText) findViewById(R.id.txtAmount);
 			txtAccount = (EditText) findViewById(R.id.txtAccount);
 			btnOrder.setOnClickListener(new View.OnClickListener() {
@@ -53,8 +52,9 @@ public class MyVcoinTopupActivity extends BaseActivity {
 									OrderState state=OrderState.Error;
 									try {
 										state = doOrder();
-									} catch (Exception e) {
-										e.printStackTrace();
+									} catch (Exception ex) {
+										Config.WriteLog(ex.getMessage());
+										//e.printStackTrace();
 									}
 									finally{
 										Message msg = handlerOrder.obtainMessage();
@@ -69,25 +69,10 @@ public class MyVcoinTopupActivity extends BaseActivity {
 					} catch (Exception ex) { }
 				}
 			});
-			/*btnMyContact.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					try{
-						Intent i = new Intent(MyVcoinTopupActivity.this, ContactActivity.class);
-						startActivity(i);
-					}catch(Exception e){ }
-				}
-			});*/
 		}catch(Exception ex){
 			Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
 		}
 		btnOrder.setEnabled(true);
-	}
-
-	public void setMenu(String storeCode) {
-		// menu.setTextMainTitle(getStoreName());
-		Bitmap bitmap = getStoreLogo();
-		menu.setLogoImage(bitmap, storeCode);
 	}
 
 	final Handler handlerOrder = new Handler() {
@@ -142,11 +127,11 @@ public class MyVcoinTopupActivity extends BaseActivity {
 		String amount = txtAmount.getText().toString();
 		String account = txtAccount.getText().toString();
 		if(amount==null||account==null||amount.length()==0||account.length()==0){
-			toast("Chưa nhập đầy đủ thông tin!");
+			toast(getString(R.string.msg_missing_input));
 			return OrderState.Error;
 		}
 		
-		OrderData state = OrderController.createOrder(3, amount, "7953", account, true);
+		OrderData state = OrderController.createOrder(3, amount, getString(R.string.const_topup_vcoin_serviceid), account, true);
 		if(state != null){
 			GlobalResource globalResource = GlobalResource.getInstance();
 			globalResource.setOrderCode(""+state.response.order.paymentID);

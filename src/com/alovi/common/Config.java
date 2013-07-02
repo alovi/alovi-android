@@ -103,7 +103,7 @@ public class Config {
 	    return null;
     }
 
-    public static boolean WriteLog(String sConfigHost){
+    public static boolean WriteLog(String message){
     	try {
 	    	File myDir = new File(Environment.getExternalStorageDirectory().getPath() + "/aloviconfig");
 	    	if(!myDir.exists()) myDir.mkdirs();
@@ -112,20 +112,16 @@ public class Config {
 				myFile.createNewFile();
 				FileOutputStream fOut = new FileOutputStream(myFile);
 				OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
-				myOutWriter.append(sConfigHost);
+				myOutWriter.append(message);
 				myOutWriter.close();
 				fOut.close();
-				//APIServiceVariables.getInstance().setHOST(sConfigHost);
-				//APIServiceVariables.getInstance().setSERVICE_CONTEXT(sConfigServiceContext);
 				return true;
 			}else{
 				FileOutputStream fOut = new FileOutputStream(myFile);
 				OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
-				myOutWriter.append(sConfigHost);
+				myOutWriter.append(message);
 				myOutWriter.close();
 				fOut.close();
-				//APIServiceVariables.getInstance().setHOST(sConfigHost);
-				//APIServiceVariables.getInstance().setSERVICE_CONTEXT(sConfigServiceContext);
 				return true;
 			}
         }catch (Exception err) {

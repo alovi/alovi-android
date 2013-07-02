@@ -1,6 +1,7 @@
 package com.alovi.activity;
 
 import com.alovi.R;
+import com.alovi.common.Config;
 import com.alovi.common.MainMenu;
 import com.alovi.common.MessageTypes;
 import com.alovi.common.Util;
@@ -78,7 +79,9 @@ public class MyWalletActivity extends BaseActivity {
 			} else {
 				messageBox(MessageTypes.Error, getString(R.string.text_check_net_fail).toString());
 			}
-		} catch (Exception ex) { }
+		} catch (Exception ex) {
+			Config.WriteLog(ex.getMessage());
+		}
 	}
 
 	final Handler handlerUpdate = new Handler() {
