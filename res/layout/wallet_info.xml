@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top_menu_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:stretchColumns="1,2" >
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_register_username"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/txt_edit_user_UserName"
+                    android:layout_span="2"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:inputType="none" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/user_register_phone"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/txtphoneNumber1"
+                    android:inputType="textPhonetic"
+                    android:editable="false"
+					android:layout_span="2" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:text="@string/txt_sodu_tkalovi"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/txt_editinfo_sodu"
+                    android:inputType="text"
+                    android:editable="false"
+					android:layout_span="2" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dip"
+        android:stretchColumns="0,2,4" >
+
+        <TableRow>
+
+            <TextView />
+
+            <Button
+                android:id="@+id/btn_edit_info_ok"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_accept" />
+
+            <TextView />
+        </TableRow>
+    </TableLayout>
+
+    <include layout="@layout/main_bottom_menu_layout" />
+
+</LinearLayout>
